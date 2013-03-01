@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/ProMotion/version-formotion', __FILE__)
+require File.expand_path('../lib/ProMotion/formotion/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Stephan Toggweiler"]
@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.name          = "ProMotion-formotion"
   gem.require_paths = ["lib"]
   gem.version       = ProMotion::FORMOTION_VERSION
-  gem.add_dependency("ProMotion", "~> 0.4.1")
-  gem.add_dependency("formotion", "~> 1.1.4")
+  gem.add_runtime_dependency("ProMotion", "~> 0.4.1")
+  gem.add_runtime_dependency("formotion", "~> 1.1.4")
 end
 
