@@ -1,8 +1,8 @@
 module ProMotion
   module Formotion
   
-class FormotionScreen < Formotion::FormController # Can also be < UIViewController
-  include ProMotion::ScreenModule # Not TableScreenModule since we're using Formotion for that
+class FormotionScreen < ::Formotion::FormController # Can also be < UIViewController
+  include ::ProMotion::ScreenModule # Not TableScreenModule since we're using Formotion for that
 
   # Required functions for ProMotion to work properly
 
@@ -11,7 +11,7 @@ class FormotionScreen < Formotion::FormController # Can also be < UIViewControll
   end
   
   def init_form
-    @local_form=Formotion::Form.new(form_data)
+    @local_form=::Formotion::Form.new(form_data)
     if self.respond_to?(:on_submit)
       @local_form.on_submit do |form|
         self.on_submit(form.render)
