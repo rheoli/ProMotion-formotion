@@ -1,4 +1,5 @@
 module ProMotion
+  module Formotion
   
 class FormotionScreen < Formotion::FormController # Can also be < UIViewController
   include ProMotion::ScreenModule # Not TableScreenModule since we're using Formotion for that
@@ -67,4 +68,5 @@ class FormotionScreen < Formotion::FormController # Can also be < UIViewControll
   end
 end
 
+end
 end

@@ -1,3 +1,5 @@
 module ProMotion
-  FORMOTION_VERSION = "0.0.5" unless defined?(ProMotion::FORMOTION_VERSION)
+  module Formotion
+    VERSION = "0.0.5" unless defined?(ProMotion::Formotion::VERSION)
+  end
 end

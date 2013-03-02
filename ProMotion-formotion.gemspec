@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "ProMotion-formotion"
   gem.require_paths = ["lib"]
-  gem.version       = ProMotion::FORMOTION_VERSION
+  gem.version       = ProMotion::Formotion::VERSION
   gem.add_runtime_dependency("ProMotion", "~> 0.4.1")
   gem.add_runtime_dependency("formotion", "~> 1.1.4")
 end
