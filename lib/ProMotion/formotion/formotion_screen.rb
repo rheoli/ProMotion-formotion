@@ -9,21 +9,17 @@ class FormotionScreen < ::Formotion::FormController # Can also be < UIViewContro
   def form_data
     {}
   end
-  
-  def init_form
-    @local_form=::Formotion::Form.new(form_data)
-    if self.respond_to?(:on_submit)
-      @local_form.on_submit do |form|
-        self.on_submit(form.render)
-      end
-    end
-    self.initWithForm(@local_form)
-  end
 
   def self.new(args = {})
-    s = self.alloc.init_form
+    s = self.alloc
     s.on_create(args) if s.respond_to?(:on_create)
-    s
+    @local_form=::Formotion::Form.new(s.form_data)
+    if s.respond_to?(:on_submit)
+      @local_form.on_submit do |form|
+        s.on_submit(form.render)
+      end
+    end
+    s.initWithForm(@local_form)
   end
 
   def viewDidLoad
