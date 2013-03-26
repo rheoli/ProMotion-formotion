@@ -20,6 +20,8 @@ class FormotionScreen < ::Formotion::FormController # Can also be < UIViewContro
       end
     end
     s.initWithForm(@local_form)
+    s.update_table_data if s.respond_to?(:update_table_data)
+    s
   end
 
   def viewDidLoad
