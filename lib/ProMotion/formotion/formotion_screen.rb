@@ -13,7 +13,8 @@ class FormotionScreen < ::Formotion::FormController # Can also be < UIViewContro
   def self.new(args = {})
     s = self.alloc
     s.on_create(args) if s.respond_to?(:on_create)
-    @local_form=::Formotion::Form.new(s.form_data)
+    @local_form=s.form_data
+    @local_form=::Formotion::Form.new(@local_form) if @local_form.class==Hash
     if s.respond_to?(:on_submit)
       @local_form.on_submit do |form|
         s.on_submit(form.render)
