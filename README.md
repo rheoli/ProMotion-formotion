@@ -4,6 +4,9 @@ ProMotion Formotion Screen
 
 Made a gem from the ProMotion formotion example at https://github.com/clearsightstudio/ProMotion#using-your-own-uiviewcontroller
 
+Now with 100% more motion_require
+
+
 ## Setup
 
 Add this gem to your project, in Gemfile `gem 'ProMotion-formotion'`,
@@ -11,40 +14,40 @@ then `bundle update`
 
 Create a Formotion Screen with:
 ```ruby
-class MyFormotionScreen < ProMotion::Formotion::FormotionScreen
-	title "Formotion Example"
-  
+class LoginScreen < PM::FormotionScreen
+
+  title "Login"
+
   def on_submit(_form)
-    # Submit pressed
-    if Data.saved?
-      close(saved: true)
-    end
+   
   end
-  
-  def form_data
+
+  def table_data
     {
       sections: [{
-        title: "Test",
+        title: "Credentials",
         rows: [{
-          title: "Name",
-          key: :name,
-          placeholder: "tag name",
+          title: "Email",
+          key: :email,
+          placeholder: "example@kohactive.com",
           type: :string,
           auto_correction: :no,
           auto_capitalization: :none
         },
         {
-          title: "Photo",
-          key: :photo,
-          placeholder: "photo name",
-          type: :image,
+          title: "Password",
+          key: :password,
+          placeholder: "",
+          type: :string,
           auto_correction: :no,
           auto_capitalization: :none
         },
-      ],
+      ]
       }]
     }
   end
+
+
 
 end
 ``` 

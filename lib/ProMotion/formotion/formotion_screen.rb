@@ -83,5 +83,7 @@ module ProMotion
         self.on_rotate
       end
     end
+  else
+    throw "Unable to find Formotion"
   end
 end
