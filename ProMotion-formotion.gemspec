@@ -21,6 +21,6 @@ Gem::Specification.new do |gem|
   gem.version       = ProMotion::Formotion::VERSION
   gem.add_runtime_dependency("ProMotion", ">= 1.1.1")
   gem.add_runtime_dependency("formotion", ">= 1.6")
-  gem.add_runtime_dependency("motion-require", ">= 0.0.6")
+  gem.add_runtime_dependency("motion-require", ">= 0.1.1")
 end
 
