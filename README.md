@@ -15,7 +15,8 @@ gem 'formotion', :git => 'https://github.com/clayallsopp/formotion.git'
 gem 'ProMotion-formotion'
 ```
 then `bundle update`.
-Important: At the moment you need to use the git versions of the ProMotion and formotion Gems for a working App.
+
+__Important__: At the moment you need to use the git versions of the ProMotion and formotion Gems for a working App.
 
 Please add `app.detect_dependencies = false` to your Rakefile in Motion::Project::App.setup as we use motion-require.
 
