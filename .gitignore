@@ -6,6 +6,8 @@ coverage
 InstalledFiles
 lib/bundler/man
 pkg
+build
+gems
 rdoc
 spec/reports
 test/tmp

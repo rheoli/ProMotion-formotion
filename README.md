@@ -4,13 +4,20 @@ ProMotion Formotion Screen
 
 Made a gem from the ProMotion formotion example at https://github.com/clearsightstudio/ProMotion#using-your-own-uiviewcontroller
 
-Now with 100% more motion_require
-
 
 ## Setup
 
-Add this gem to your project, in Gemfile `gem 'ProMotion-formotion'`,
-then `bundle update`
+Add this gem to your project, in Gemfile `gem 'ProMotion-formotion'`:
+```
+gem "rake"
+gem 'ProMotion', :git => 'https://github.com/clearsightstudio/ProMotion.git'
+gem 'formotion', :git => 'https://github.com/clayallsopp/formotion.git'
+gem 'ProMotion-formotion'
+```
+then `bundle update`.
+Important: At the moment you need to use the git versions of the ProMotion and formotion Gems for a working App.
+
+Please add `app.detect_dependencies = false` to your Rakefile in Motion::Project::App.setup as we use motion-require.
 
 Create a Formotion Screen with:
 ```ruby
