@@ -54,8 +54,8 @@ class LoginScreen < PM::FormotionScreen
       }]
     }
   end
-
-
-
 end
 ``` 
+
+## Example
+See under https://github.com/rheoli/formotion-example.

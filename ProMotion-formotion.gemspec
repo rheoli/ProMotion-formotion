@@ -19,13 +19,8 @@ Gem::Specification.new do |gem|
   gem.name          = "ProMotion-formotion"
   gem.require_paths = ["lib"]
   gem.version       = ProMotion::Formotion::VERSION
-  gem.add_runtime_dependency("ProMotion", ">= 1.1.1")
-<<<<<<< HEAD
-  gem.add_runtime_dependency("formotion", ">= 1.4.0")
-  gem.add_runtime_dependency("motion-require", ">= 0.0.3")
-=======
-  gem.add_runtime_dependency("formotion", ">= 1.6")
-  gem.add_runtime_dependency("motion-require", ">= 0.1.1")
->>>>>>> 1a9df0c106b68173e0faef5ce9d93871340ab715
+  gem.add_runtime_dependency("ProMotion", ">= 1.2.0")
+  gem.add_runtime_dependency("formotion", ">= 1.7")
+  gem.add_runtime_dependency("motion-require", ">= 0.2.0")
 end
 
