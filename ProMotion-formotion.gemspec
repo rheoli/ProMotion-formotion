@@ -22,5 +22,8 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency("ProMotion", ">= 1.2.0")
   gem.add_runtime_dependency("formotion", ">= 1.7")
   gem.add_runtime_dependency("motion-require", ">= 0.2.0")
+  gem.add_runtime_dependency("ProMotion", ">= 1.1.1")
+  gem.add_runtime_dependency("formotion", ">= 1.6")
+  gem.add_runtime_dependency("motion-require", ">= 0.1.1")
 end
 
