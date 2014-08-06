@@ -5,7 +5,8 @@ module ProMotion
 
       def self.new(args = {})
         s = self.alloc.initWithStyle(UITableViewStyleGrouped)
-        s.on_create(args) if s.respond_to?(:on_create)
+        s.on_create(args) if s.respond_to?(:on_create)        # for ProMotion gem v1.2 and earlier
+        s.screen_init(args) if s.respond_to?(:screen_init)    # for ProMotion gem v2.0 and later
 
         if s.respond_to?(:table_data)
           s.form = s.table_data
