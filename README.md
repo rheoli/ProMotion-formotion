@@ -10,8 +10,8 @@ Made a gem from the ProMotion formotion example at https://github.com/clearsight
 Add this gem to your project, in Gemfile `gem 'ProMotion-formotion'`:
 ```
 gem "rake"
-gem 'ProMotion', :git => 'https://github.com/clearsightstudio/ProMotion.git'
-gem 'formotion', :git => 'https://github.com/clayallsopp/formotion.git'
+gem 'ProMotion'
+gem 'formotion'
 gem 'ProMotion-formotion'
 ```
 then `bundle update`.
