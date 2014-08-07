@@ -32,10 +32,6 @@ module ProMotion
         self.tableView.reloadData
       end
 
-      def screen_setup
-        self.title = self.class.send(:get_title)
-      end
-
       def loadView
         super
         self.send(:on_load) if self.respond_to?(:on_load)
