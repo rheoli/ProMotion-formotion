@@ -16,10 +16,6 @@ gem 'ProMotion-formotion'
 ```
 then `bundle update`.
 
-__Important__: At the moment you need to use the git versions of the ProMotion and formotion Gems for a working App.
-
-Please add `app.detect_dependencies = false` to your Rakefile in Motion::Project::App.setup as we use motion-require.
-
 Create a Formotion Screen with:
 ```ruby
 class LoginScreen < PM::FormotionScreen

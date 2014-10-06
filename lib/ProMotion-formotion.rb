@@ -3,7 +3,9 @@ unless defined?(Motion::Project::Config)
 end
 
 require "formotion"
-require "motion-require"
 require "ProMotion/formotion/version"
 
-Motion::Require.all(Dir.glob(File.expand_path('../ProMotion/**/*.rb', __FILE__)))
+Motion::Project::App.setup do |app|
+  lib_dir_path = File.dirname(File.expand_path(__FILE__))
+  app.files << File.join(lib_dir_path, "ProMotion/formotion/formotion_screen.rb")
+end
